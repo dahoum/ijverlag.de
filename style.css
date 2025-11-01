@@ -8,6 +8,16 @@ body
   max-width: 500px;
 }
 
+a.logo
+{
+  margin-bottom: 0px;
+}
+
+p.subtitle
+{
+  margin-top: 0px;
+}
+
 h1
 {
   font-family: "Oswald", sans-serif;
