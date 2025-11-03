@@ -39,7 +39,11 @@
 
         <script>
 
-            const map = L.map('map').setView([49.87772102994678, 8.658690941103313], 13);
+            // const map = L.map('map').setView([49.87772102994678, 8.658690941103313], 13);
+
+            const map = L.map('map').locate({setView: true, maxZoom: 16});
+            
+            // setView([49.87772102994678, 8.658690941103313], 13);
 
             const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
@@ -57,7 +61,6 @@
 
             const marker4 = L.marker([49.87791068888482, 8.659559597401397]).addTo(map)
                             .bindPopup('<b>bluebee cafe</b><br>Lauteschlägerstraße 28, 64289 Darmstadt<br><a href="https://www.bluebee.cafe">https://www.bluebee.cafe</a>');
-
 
             map.fitBounds(fg.getBounds());
 
